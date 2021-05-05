@@ -1,8 +1,10 @@
 # Clean API em Typescript
 
-Essa é uma tentativa de escrever um código com as boas práticas de Clean Code em Typescript, mas com algumas alterações para deixar o código mais funcional.
+Essa é uma tentativa de escrever um código com as boas práticas de [Arquitetura Limpa](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) em Typescript, mas com algumas alterações para deixar o código mais funcional.
 
 A ideia desse código é conseguir separar bem as camadas da aplicação, mas sempre pensando em utilizar funções ao invés de classes.
+
+![Clean Arquitecture](https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg)
 
 ## Camadas
 
@@ -21,9 +23,15 @@ Esta camada é responsável por transformar o resultado de um caso de uso da apl
 Aqui ficam as integrações externas ao seu serviço. Implementações de persistência, chamadas para APIs externas ou outras coisas referentes a infraestrutura vem aqui. Como esta camada é uma das últimas, alterações de serviços externos ou banco de dados não infuenciam o resto do código.
 
 ### Web
-Aqui vem a implementação do seu web server de fato. Neste exemplo, foi utilizado Express.js. Aqui também é onde as injeções de dependências são criadas, para ligar toda a configuração de sua aplicação
+Aqui vem a implementação do seu web server de fato. Neste exemplo, foi utilizado [Express.js](https://expressjs.com/pt-br/). Aqui também é onde as injeções de dependências são criadas, para ligar toda a configuração de sua aplicação
 
-### TODO
+## TODO
 - Teste de integração
   - Infraestrutura
   - Web
+
+## Referências
+- [Revisão de Injeção de Dependência](https://www.youtube.com/watch?v=qBYVW4ghMi8)
+- [Arquiteturas comuns de aplicativo Web](https://docs.microsoft.com/pt-br/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures)
+- [Injeção Assíncrona](https://www.youtube.com/watch?v=o9qL4HcDpIQ)
+- [Design Patters Funcionais](https://www.youtube.com/watch?v=srQt1NAHYC0)
